@@ -1,0 +1,20 @@
+#########################################################
+#Localizations for Sailcraft
+#########################################################
+
+### Item Localizations
+
+#Materials
+item.sailcraft:pearl.name=Pearl
+item.sailcraft:seasonedIronIngot.name=Seasoned Iron Ingot
+
+
+#Tools
+item.sailcraft:flintlock.name=Flintlock Pistol
+item.sailcraft:hook.name=Hook
+
+### Block Localizations
+
+#Materials
+tile.sailcraft:seasonedIronBlock.name = Seasoned Iron Block
+
