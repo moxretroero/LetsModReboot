@@ -4,24 +4,24 @@ import com.moxretroero.sailcraft.creativetab.CreativeTabSC;
 import com.moxretroero.sailcraft.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.Block;
+import net.minecraft.block.BlockLog;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.util.IIcon;
 
-public class BlockSC extends Block
+public class BlockLogSC extends BlockLog
 {
     //standard constructor with specified material
-    public BlockSC(Material material)
+    public BlockLogSC()
     {
-        super(material);
+        super();
         this.setCreativeTab(CreativeTabSC.SC_TAB);
     }
 
-    //Default constructor - goes to wood automatically
-    public BlockSC()
-    {
-        this(Material.wood);
-    }
+    @SideOnly (Side.CLIENT)
+    protected IIcon topIcon;
+    @SideOnly (Side.CLIENT)
+    protected IIcon sideIcon;
 
     //Handles getting the name for an object
     @Override
@@ -36,10 +36,24 @@ public class BlockSC extends Block
     //Does icon registration, associating textures with their proper blocks
     //Client only
     @Override
-    @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister)
     {
-        blockIcon = iconRegister.registerIcon(String.format("%s", getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
+        sideIcon = iconRegister.registerIcon(String.format("%s", getUnwrappedUnlocalizedName(this.getUnlocalizedName())+"Side"));
+        topIcon = iconRegister.registerIcon(String.format("%s", getUnwrappedUnlocalizedName(this.getUnlocalizedName())+"Top"));
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    protected IIcon getSideIcon(int metadata)
+    {
+        return sideIcon;
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    protected IIcon getTopIcon(int metadata)
+    {
+        return topIcon;
     }
 
     //Handles the parsing of an unlocalized name

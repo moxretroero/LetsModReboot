@@ -11,5 +11,6 @@ public class BlockSeasonedIron extends BlockSC
         this.setBlockName("seasonedIronBlock");
         this.setBlockTextureName("seasonedIronBlock");
         this.setStepSound(Block.soundTypeMetal);
+        this.setHarvestLevel("pickaxe", 1);
     }
 }

@@ -3,6 +3,7 @@ package com.moxretroero.sailcraft;
 import com.moxretroero.sailcraft.handler.ConfigurationHandler;
 import com.moxretroero.sailcraft.init.ModBlocks;
 import com.moxretroero.sailcraft.init.ModItems;
+import com.moxretroero.sailcraft.init.Recipes;
 import com.moxretroero.sailcraft.proxy.IProxy;
 import com.moxretroero.sailcraft.utility.LogHelper;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -46,6 +47,7 @@ public class SailCraft
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        Recipes.init();
         LogHelper.info("Init complete.");
     }
 

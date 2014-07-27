@@ -2,19 +2,45 @@
 #Localizations for Sailcraft
 #########################################################
 
+###Special Localizations
+
+#Labels and Tags
+itemGroup.sailcraft=SailCraft
+
+
 ### Item Localizations
 
 #Materials
 item.sailcraft:pearl.name=Pearl
 item.sailcraft:seasonedIronIngot.name=Seasoned Iron Ingot
+item.sailcraft:seasonedIronBand.name=Seasoned Iron Band
+item.sailcraft:seasonedIronRing.name=Seasoned Iron Ring
 
+#Food
+item.sailcraft:limeFruit.name=Lime
+item.sailcraft:lemonFruit.name=Lemon
+item.sailcraft:orangeFruit.name=Orange
 
 #Tools
 item.sailcraft:flintlock.name=Flintlock Pistol
 item.sailcraft:hook.name=Hook
 
+
+#Boats
+item.sailcraft:reinforcedBoat.name=Reinforced Boat
+
 ### Block Localizations
 
 #Materials
-tile.sailcraft:seasonedIronBlock.name = Seasoned Iron Block
+tile.sailcraft:seasonedIronBlock.name=Seasoned Iron Block
+tile.sailcraft:seasonedIronFrame.name=Seasoned Iron Frame
+tile.sailcraft:seasonedLog.name=Seasoned Log
+tile.sailcraft:seasonedWoodPlanks.name=Seasoned Wood Planks
 
+#Decorative
+tile.sailcraft:lemonTreeLog.name=Lemon Wood Log
+tile.sailcraft:lemonWoodPlanks.name=Lemon Wood Planks
+tile.sailcraft:limeTreeLog.name=Lime Wood Log
+tile.sailcraft:limeWoodPlanks.name=Lime Wood Planks
+tile.sailcraft:orangeTreeLog.name=Orange Wood Log
+tile.sailcraft:orangeWoodPlanks.name=Orange Wood Planks

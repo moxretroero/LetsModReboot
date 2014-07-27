@@ -5,14 +5,14 @@ import com.moxretroero.sailcraft.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 
-public class ItemSC extends Item
+public class ItemFoodSC extends ItemFood
 {
-    public ItemSC()
+    public ItemFoodSC (int heal, int saturation, boolean wolfFood)
     {
-        super();
+        super(heal,saturation,wolfFood);
         this.setCreativeTab(CreativeTabSC.SC_TAB);
     }
 
@@ -20,7 +20,7 @@ public class ItemSC extends Item
     @Override
     public String getUnlocalizedName()
     {
-       return String.format("item.%s%s", Reference.MOD_ID.toLowerCase() + ":",getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Reference.MOD_ID.toLowerCase() + ":",getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
         /*
             Name of the item.  eg. item.sailcraft:Hook.name
          */
